@@ -18,7 +18,7 @@ quit
 
 # Format the partitions
 mkfs.ext4 /dev/sda1
-mkfs.ext4 -dev-sda2
+mkfs.ext4 /dev/sda2
 
 # Mount the partitions
 mount /dev/sda2 /mnt
