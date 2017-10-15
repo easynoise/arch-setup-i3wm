@@ -32,16 +32,21 @@ pacman-key --populate archlinux
 mkinitcpio -p linux
 
 # Install microcode for Intel processors
-pacman -S intel-ucode
+#pacman -S intel-ucode
+
+# Install and configure Grub
+pacman -S grub
+grub-install --target=i386-pc /dev/sda
+grub-mkconfig -o /boot/grub/grub.cfg
 
 # Install and configure the Bootloader
-bootctl install
-echo "title Arch Linux" > /boot/loader/entries/arch.conf
-echo "linux /vmlinuz-linux" >> /boot/loader/entries/arch.conf
-echo "initrd /intel-ucode.img" >> /boot/loader/entries/arch.conf
-echo "initrd /initramfs-linux.img" >> /boot/loader/entries/arch.conf
-echo "options root=/dev/sda2 rw" >> /boot/loader/entries/arch.conf
-echo "default arch" > /boot/loader/loader.conf
+#bootctl install
+#echo "title Arch Linux" > /boot/loader/entries/arch.conf
+#echo "linux /vmlinuz-linux" >> /boot/loader/entries/arch.conf
+#echo "initrd /intel-ucode.img" >> /boot/loader/entries/arch.conf
+#echo "initrd /initramfs-linux.img" >> /boot/loader/entries/arch.conf
+#echo "options root=/dev/sda2 rw" >> /boot/loader/entries/arch.conf
+#echo "default arch" > /boot/loader/loader.conf
 
 # Exit the chroot environment and reboot (optionaly add: umount -R /mnt)
 echo "1. exit | 2. umount -R /mnt | 3. reboot | 4. Execute Post-Installation.sh"
