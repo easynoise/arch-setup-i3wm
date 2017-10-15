@@ -10,16 +10,20 @@ timedatectl set-ntp true
 
 # Partition the disks
 parted /dev/sda mklabel msdos
-echo "mkpart primary ext4 0 100%
+echo "mkpart primary ext4 1MiB 512 MiB 
+mkpart primary ext4 512MiB 100%
 set 1 boot on
 quit
 " | parted /dev/sda
 
 # Format the partitions
 mkfs.ext4 /dev/sda1
+mkfs.ext4 -dev-sda2
 
 # Mount the partitions
-mount /dev/sda1 /mnt
+mount /dev/sda2 /mnt
+mkdir /mnt/boot
+mount /dev/sda1 /mnt/boot
 
 # Select the mirrors
 cp /etc/pacman.d/mirrorlist /etc/pacman.d/mirrorlist.bak
