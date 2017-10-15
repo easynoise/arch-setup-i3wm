@@ -10,20 +10,16 @@ timedatectl set-ntp true
 
 # Partition the disks
 parted /dev/sda mklabel gpt
-echo "mkpart ESP fat32 1MiB 200MiB
+echo "mkpart primary ext4 200MiB 100%
 set 1 boot on
-mkpart primary ext4 200MiB 100%
 quit
 " | parted /dev/sda
 
 # Format the partitions
-mkfs.fat -F32 /dev/sda1
-mkfs.ext4 /dev/sda2
+mkfs.ext4 /dev/sda1
 
 # Mount the partitions
-mount /dev/sda2 /mnt
-mkdir -p /mnt/boot
-mount /dev/sda1 /mnt/boot
+mount /dev/sda1 /mnt
 
 # Select the mirrors
 cp /etc/pacman.d/mirrorlist /etc/pacman.d/mirrorlist.bak
