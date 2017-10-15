@@ -95,10 +95,10 @@ pacman -S --noconfirm gutenprint ghostscript gsfonts
 pacman -S --noconfirm system-config-printer gtk3-print-backends simple-scan
 pacman -S --noconfirm gpicview
 pacman -S --noconfirm transmission-gtk
-pacman -S --noconfirm virtualbox virtualbox-host-modules-arch virtualbox-guest-iso
+#pacman -S --noconfirm virtualbox virtualbox-host-modules-arch virtualbox-guest-iso
 
 # Add User-"user" to VirtualBox-Group
-gpasswd -a $userName vboxusers
+#gpasswd -a $userName vboxusers
 
 # java
 echo "_JAVA_OPTIONS='-Dawt.useSystemAAFontSettings=lcd'" >> /etc/environment
