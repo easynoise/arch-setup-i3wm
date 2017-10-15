@@ -10,6 +10,8 @@ passwd $userName
 
 # Network
 dhcpcd
+pacman -S --noconfirm reflector
+reflector --country 'Germany' --age 12 --protocol https --sort rate --save /etc/pacman.d/mirrorlist
 
 # Header files and scripts for building modules for Linux kernel
 pacman-optimize
@@ -42,48 +44,48 @@ pacman -S --noconfirm gnome-keyring libsecret seahorse
 systemctl enable NetworkManager.service
 
 # Install command line and ncurses programs
-#pacman -S --noconfirm sudo
-#pacman -S --noconfirm bash-completion
-#pacman -S --noconfirm tree
-#pacman -S --noconfirm ranger w3m
-#pacman -S --noconfirm pulseaudio pulseaudio-alsa
-#pacman -S --noconfirm htop
-#pacman -S --noconfirm screen
-#pacman -S --noconfirm wget curl axel youtube-dl
-#pacman -S --noconfirm scrot
-#pacman -S --noconfirm xdotool
-#pacman -S --noconfirm xclip xsel
-#pacman -S --noconfirm lshw
-#pacman -S --noconfirm acpi
-#pacman -S --noconfirm nmap
-#pacman -S --noconfirm openssh
-#pacman -S --noconfirm vim
-#pacman -S --noconfirm ffmpeg
-#pacman -S --noconfirm git
-#pacman -S --noconfirm feh
-#pacman -S --noconfirm openvpn easy-rsa
+pacman -S --noconfirm sudo
+pacman -S --noconfirm bash-completion
+pacman -S --noconfirm tree
+pacman -S --noconfirm ranger w3m
+pacman -S --noconfirm pulseaudio pulseaudio-alsa
+pacman -S --noconfirm htop
+pacman -S --noconfirm screen
+pacman -S --noconfirm wget curl axel youtube-dl
+pacman -S --noconfirm scrot
+pacman -S --noconfirm xdotool
+pacman -S --noconfirm xclip xsel
+pacman -S --noconfirm lshw
+pacman -S --noconfirm acpi
+pacman -S --noconfirm nmap
+pacman -S --noconfirm openssh
+pacman -S --noconfirm vim
+pacman -S --noconfirm ffmpeg
+pacman -S --noconfirm git
+pacman -S --noconfirm feh
+pacman -S --noconfirm openvpn easy-rsa
 
 # Install xorg and graphics
-#pacman -S --noconfirm xorg xorg-xinit mesa
-#pacman -S --noconfirm xf86-video-intel xf86-input-synaptics
+pacman -S --noconfirm xorg xorg-xinit mesa
+pacman -S --noconfirm xf86-video-intel 
 
 # Install fonts
-#pacman -S --noconfirm ttf-dejavu
+pacman -S --noconfirm ttf-dejavu
 
-# Install desktop & window manager
-#pacman -S --noconfirm i3-wm i3status i3lock dmenu
+ Install desktop & window manager
+pacman -S --noconfirm i3-wm i3status i3lock dmenu
 
 # Install GTK-Theme and Icons
-#pacman -S --noconfirm arc-gtk-theme arc-icon-theme
+pacman -S --noconfirm arc-gtk-theme arc-icon-theme
 
 # Install graphical programs
-#pacman -S --noconfirm rxvt-unicode
+pacman -S --noconfirm rxvt-unicode
 #pacman -S --noconfirm zenity
 #pacman -S --noconfirm lxappearance
-#pacman -S --noconfirm pavucontrol
-#pacman -S --noconfirm gnome-system-monitor
-#pacman -S --noconfirm lxrandr
-#pacman -S --noconfirm firefox
+pacman -S --noconfirm pavucontrol
+pacman -S --noconfirm gnome-system-monitor
+pacman -S --noconfirm lxrandr
+pacman -S --noconfirm firefox
 #pacman -S --noconfirm gnome-calculator
 #pacman -S --noconfirm libreoffice-fresh hunspell-de
 #pacman -S --noconfirm evince
