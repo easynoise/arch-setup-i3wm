@@ -10,7 +10,7 @@ passwd $userName
 
 # Network
 dhcpcd
-pacman -S --noconfirm reflector
+pacman -S reflector
 reflector --country 'Germany' --age 12 --protocol https --sort rate --save /etc/pacman.d/mirrorlist
 
 # Header files and scripts for building modules for Linux kernel
