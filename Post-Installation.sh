@@ -82,11 +82,11 @@ pacman -S --noconfirm gnome-system-monitor
 pacman -S --noconfirm lxrandr
 pacman -S --noconfirm firefox
 pacman -S --noconfirm gnome-calculator
-pacman -S --noconfirm libreoffice-fresh hunspell-de
+#pacman -S --noconfirm libreoffice-fresh hunspell-de
 pacman -S --noconfirm evince
 pacman -S --noconfirm smplayer
 pacman -S --noconfirm geany
-pacman -S --noconfirm eclipse-java gradle
+#pacman -S --noconfirm eclipse-java gradle
 pacman -S --noconfirm gimp
 pacman -S --noconfirm gparted dosfstools ntfs-3g mtools
 pacman -S --noconfirm pcmanfm-gtk3 gvfs udisks2
@@ -116,7 +116,7 @@ echo "$userName ALL = NOPASSWD: /usr/bin/shutdown" >> /etc/sudoers
 localectl set-x11-keymap de pc105 nodeadkeys
 
 # Configure synaptics touchpad
-cp ./config/50-synaptics.conf /etc/X11/xorg.conf.d/
+#cp ./config/50-synaptics.conf /etc/X11/xorg.conf.d/
 
 # Copy all files
 cp -R ./config/home/. /home/$userName/
