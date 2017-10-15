@@ -10,7 +10,7 @@ timedatectl set-ntp true
 
 # Partition the disks
 parted /dev/sda mklabel gpt
-echo "mkpart primary ext4 200MiB 100%
+echo "mkpart primary ext4 1MiB 100%
 set 1 boot on
 quit
 " | parted /dev/sda
