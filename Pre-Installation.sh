@@ -9,7 +9,7 @@
 timedatectl set-ntp true
 
 # Partition the disks
-parted /dev/sda mklabel gpt
+parted /dev/sda mklabel msdos
 echo "mkpart primary ext4 0 100%
 set 1 boot on
 quit
