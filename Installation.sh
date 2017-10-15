@@ -29,7 +29,7 @@ pacman-key --init
 pacman-key --populate archlinux
 
 # Create a new initial RAM disk
-mkinitcpio -p linux
+#mkinitcpio -p linux
 
 # Install microcode for Intel processors
 #pacman -S intel-ucode
