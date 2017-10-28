@@ -80,26 +80,26 @@ pacman -S --noconfirm arc-gtk-theme arc-icon-theme
 
 # Install graphical programs
 pacman -S --noconfirm rxvt-unicode
-#pacman -S --noconfirm zenity
-#pacman -S --noconfirm lxappearance
+pacman -S --noconfirm zenity
+pacman -S --noconfirm lxappearance
 pacman -S --noconfirm pavucontrol
 pacman -S --noconfirm gnome-system-monitor
 pacman -S --noconfirm lxrandr
 pacman -S --noconfirm firefox
 #pacman -S --noconfirm gnome-calculator
 #pacman -S --noconfirm libreoffice-fresh hunspell-de
-#pacman -S --noconfirm evince
-#pacman -S --noconfirm smplayer
+pacman -S --noconfirm evince
+pacman -S --noconfirm smplayer
 #pacman -S --noconfirm geany
 #pacman -S --noconfirm eclipse-java gradle
 #pacman -S --noconfirm gimp
-#pacman -S --noconfirm gparted dosfstools ntfs-3g mtools
-#pacman -S --noconfirm pcmanfm-gtk3 gvfs udisks2
-#pacman -S --noconfirm file-roller unrar p7zip lrzip
-#pacman -S --noconfirm gutenprint ghostscript gsfonts
-#pacman -S --noconfirm system-config-printer gtk3-print-backends simple-scan
-#pacman -S --noconfirm gpicview
-#pacman -S --noconfirm transmission-gtk
+pacman -S --noconfirm gparted dosfstools ntfs-3g mtools
+pacman -S --noconfirm pcmanfm-gtk3 gvfs udisks2
+pacman -S --noconfirm file-roller unrar p7zip lrzip
+pacman -S --noconfirm gutenprint ghostscript gsfonts
+pacman -S --noconfirm system-config-printer gtk3-print-backends simple-scan
+pacman -S --noconfirm gpicview
+pacman -S --noconfirm transmission-gtk
 #pacman -S --noconfirm virtualbox virtualbox-host-modules-arch virtualbox-guest-iso
 
 # Add User-"user" to VirtualBox-Group
